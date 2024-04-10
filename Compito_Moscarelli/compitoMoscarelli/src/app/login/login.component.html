@@ -1,0 +1,54 @@
+<h1>Welcome</h1>
+
+<!-- form per effettuare la registrazione -->
+<button (click) = registerMode()>Registrati</button>
+
+<div *ngIf = "registeredMode">
+<h2>registrazione</h2>
+
+
+<label>Username:</label> <br>
+
+<input type="text" [(ngModel)] = "newRegistered.username" required><br>
+
+<label>Password:</label><br>
+
+<input type="text" [(ngModel)] = "newRegistered.password" required><br>
+
+<label>email:</label><br>
+
+<input type="text" [(ngModel)] = "newRegistered.email" required><br>
+
+
+<label>name:</label><br>
+
+<input type="text" [(ngModel)] = "newRegistered.name" required><br>
+
+
+<label>surname:</label><br>
+
+<input type="text" [(ngModel)] = "newRegistered.surname" required><br>
+<h2>{{registeredResponse}}</h2>
+
+<button (click) = registra()>registra</button>
+</div>
+<!-- 
+form per effettuare l'accesso -->
+<hr>
+
+<button (click) = loginMode()>Accedi</button><br>
+<div *ngIf = "loginedMode">
+<h2>Login</h2>
+<label>Username:</label> <br>
+
+<input type="text" [(ngModel)] = "newAccess.username"  required><br>
+
+<label>Password:</label><br>
+
+<input type="text" [(ngModel)] = "newAccess.password"  required><br>
+
+<h2>{{response}}</h2>
+
+<button (click) = accesso()>Login</button><br>
+
+</div>
